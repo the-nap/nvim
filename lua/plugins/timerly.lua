@@ -1,5 +1,6 @@
 return
 {
+--[[
   dir="~/projects/timerly",
   cmd = "TimerlyToggle",
   dependencies = "nvzone/volt",
@@ -17,4 +18,5 @@ return
       end
     end,
   },
+]]--
 }
