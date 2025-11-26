@@ -21,9 +21,16 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     opts.desc = "Smart rename"
     keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-    
+
     opts.desc = "Restart LSP"
     keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)
-    
+
   end,
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'java',
+  callback = function (args)
+    require'jdtls.jdtls_setup'.setup()
+  end
 })
