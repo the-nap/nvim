@@ -5,6 +5,11 @@ return {
       'lua_ls',
       'vtsls'
     },
+    automatic_enable = {
+      exclude = {
+        'jdtls'
+      },
+    },
   },
   dependencies = {
     'neovim/nvim-lspconfig',
