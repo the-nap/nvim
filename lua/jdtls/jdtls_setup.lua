@@ -4,8 +4,7 @@ function M:setup()
   -- If you started neovim within `~/dev/xy/project-1` this would resolve to `project-1`
   local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 
-  local workspace_dir = '/home/thecoder_/development/jdtls_data' .. project_name
-
+  local workspace_dir = '/home/thecoder_/development/jdtls_data/' .. project_name
   local config = {
     cmd = {
       "java", --no jdk specifically needed because jdk 25 is the only one installed
@@ -36,6 +35,7 @@ function M:setup()
       -- needs some place to store index data for each project it loads
       -- you don't want it to decide by himself
       '-data', workspace_dir,
+      '-javaagent:' .. '/home/thecoder_/.local/share/nvim/mason/packages/jdtls/lombok.jar',
     },
 
     -- root_dir points to root of project, it is identified by the presence of one of those files
