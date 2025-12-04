@@ -4,6 +4,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(ev)
     local opts = { buffer = ev.buf, silent = true }
 
+    opts.desc = "Show line diagnostics"
+    keymap.set("n", "<leader>d ", vim.diagnostic.open_float, opts)
+
     opts.desc = "Show LSP references"
     keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts)
 
@@ -24,6 +27,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     opts.desc = "Restart LSP"
     keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)
+
+    opts.desc = "Show documentation for what ir under cursor"
+    keymap.set("n","K", vim.lsp.buf.hover, opts)
 
   end,
 })

@@ -20,8 +20,6 @@ return {
       return string.format("%s %02d:%02d", state.mode:gsub("^%l", string.upper), mins, secs)
     end
 
-    -- Insert Doing into lualine_x
-    table.insert(opts.sections.lualine_x, require("doing").status )
     -- Insert Timerly into lualine_x
     table.insert(opts.sections.lualine_x, get_timerly_status)
 
