@@ -29,12 +29,12 @@ return {
       nerd_font_variant = 'mono'
     },
 
-    completion = { 
+    completion = {
       accept = {
         auto_brackets = { enabled = true }
       },
 
-      documentation = { 
+      documentation = {
         auto_show = true,
         auto_show_delay_ms = 250,
         treesitter_highlighting = true,
@@ -70,8 +70,8 @@ return {
       default = { 'lazydev', 'lsp', 'path', 'snippets', 'buffer' },
       providers = {
         lazydev = {
-          name = 'LazyDev',
-          module = 'lazydev.integrations.blink',
+          name = "LazyDev",
+          module = "lazydev.integrations.blink",
           score_offset = 1000,
         },
         lsp = {
@@ -96,9 +96,9 @@ return {
         },
       },
     },
-      cmdline = {
-        keymap = { preset = 'inherit' },
-        sources = function()
+    cmdline = {
+      keymap = { preset = 'inherit' },
+      sources = function()
         local type = vim.fn.getcmdtype()
 
         if type == "/" or type == "?" then
