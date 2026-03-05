@@ -22,6 +22,7 @@ return {
 
     -- Insert Timerly into lualine_x
     table.insert(opts.sections.lualine_x, get_timerly_status)
+    table.insert(opts.sections.lualine_x, require("doing").status)
 
     -- Set theme
     opts.options = opts.options or {}
