@@ -6,22 +6,21 @@ return {
     opts.sections = opts.sections or {}
     opts.sections.lualine_x = opts.sections.lualine_x or {}
 
-    -- Timerly function
-    local function get_timerly_status()
-      local state = require("timerly.state")
-      if state.progress == 0 then
+    local function getPomoStatus()
+      local ok, pomo = pcall(require, "pomo")
+      if not ok then
         return ""
       end
 
-      local total = math.max(0, state.total_secs + 1) -- Sync with display
-      local mins = math.floor(total / 60)
-      local secs = total % 60
+      local timer = pomo.get_first_to_finish()
+      if timer == nil then
+        return ""
+      end
 
-      return string.format("%s %02d:%02d", state.mode:gsub("^%l", string.upper), mins, secs)
+      return "󰄉 " .. tostring(timer)
     end
-
-    -- Insert Timerly into lualine_x
-    table.insert(opts.sections.lualine_x, get_timerly_status)
+    -- Timer function
+    table.insert(opts.sections.lualine_x, getPomoStatus)
     table.insert(opts.sections.lualine_x, require("doing").status)
 
     -- Set theme
