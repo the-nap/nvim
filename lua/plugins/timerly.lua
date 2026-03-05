@@ -1,7 +1,5 @@
-return
-{
---[[
-  dir="~/projects/timerly",
+return {
+  dir="~/development/timerly",
   cmd = "TimerlyToggle",
   dependencies = "nvzone/volt",
 
@@ -18,5 +16,4 @@ return
       end
     end,
   },
-]]--
 }

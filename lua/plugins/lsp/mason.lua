@@ -3,7 +3,6 @@ return {
   opts = {
     ensure_installed = {
       'lua_ls',
-      'vtsls'
     },
     automatic_enable = {
       exclude = {
