@@ -8,8 +8,8 @@ vim.keymap.set("n", "<leader>ip", function()
   end
 end, { desc = "Initialize Molten for python3", silent = true })
 
-vim.keymap.set("n", "<localleader>e", ":MoltenEvaluateOperator<CR>", { desc = "evaluate operator", silent = true })
-vim.keymap.set("n", "<localleader>os", ":noautocmd MoltenEnterOutput<CR>", { desc = "open output window", silent = true })
+vim.keymap.set("n", "<leader>e", ":MoltenEvaluateOperator<CR>", { desc = "evaluate operator", silent = true })
+vim.keymap.set("n", "<leader>so", ":noautocmd MoltenEnterOutput<CR>", { desc = "open output window", silent = true })
 
 
 vim.g.molten_auto_open_output = false
