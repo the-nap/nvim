@@ -11,8 +11,8 @@ return
   disable_frontmatter = true,
   workspaces = {
     {
-      name = "Obsidian Vault",
-      path = "~/Documents/Obsidian Vault",
+      name = "SecondBrain",
+      path = "~/Documents/SecondBrain",
     }
   }
 }
