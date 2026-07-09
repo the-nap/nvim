@@ -39,3 +39,5 @@ vim.opt.colorcolumn = "80"
 vim.g.mapleader = " "
 vim.g.tex_flavor = "latex"
 vim.g.vim_markdown_frontmatter = 1
+
+vim.g.python3_host_prog=vim.fn.expand("~/.virtualenvs/neovim/bin/python3")
