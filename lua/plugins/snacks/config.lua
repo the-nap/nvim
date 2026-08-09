@@ -48,7 +48,7 @@ M.opts = {
     },
     -- Highlighted guide for current scope (function, block, etc.)
     scope = {
-      enabled = false, -- indent-blankline handles scope
+      enabled = true, -- indent-blankline handles scope
       priority = 200, -- higher than indent to draw on top
       char = '┃', -- scope guide character
       underline = false, -- true: underline first line of scope
