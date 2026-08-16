@@ -5,7 +5,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     local opts = { buffer = ev.buf, silent = true }
 
     opts.desc = "Show line diagnostics"
-    keymap.set("n", "<leader>d ", vim.diagnostic.open_float, opts)
+    keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
 
     opts.desc = "Show LSP references"
     keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts)
